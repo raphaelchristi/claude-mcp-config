@@ -67,8 +67,47 @@
 
 ## 📝 Comandos de Planejamento
 
+### `/prd "descrição"`
+**Descrição**: Comando rápido para criar PRD com contexto inicial
+
+**Uso**:
+```bash
+/prd "Sistema de e-commerce com carrinho e pagamento"
+/prd "API REST para gerenciamento de tarefas"
+```
+
+**Processo**:
+1. Inicia com o contexto fornecido
+2. Claude faz perguntas para detalhar requisitos
+3. Gera PRD completo de forma iterativa
+4. Salva automaticamente em `.taskmaster/docs/prd.txt`
+
+**Exemplo de Diálogo**:
+```
+User: /prd "Aplicativo de delivery de comida"
+
+Claude: Entendi! Vou criar um PRD para um aplicativo de delivery. 
+Algumas perguntas para detalhar:
+
+1. Quais são os tipos de usuários? (cliente, restaurante, entregador?)
+2. Principais funcionalidades para cada tipo?
+3. Plataformas alvo? (Web, Mobile, ambos?)
+4. Integrações necessárias? (pagamento, mapas, etc.)
+
+User: 1. Todos os três tipos
+2. Cliente: buscar, pedir, acompanhar. Restaurante: cardápio, pedidos. 
+   Entregador: rotas, entregas
+3. Mobile primeiro, web admin
+4. Stripe, Google Maps, notificações push
+
+Claude: Perfeito! Mais alguns detalhes...
+[continua o diálogo iterativo]
+```
+
+---
+
 ### `/create-prd`
-**Descrição**: Cria Product Requirements Document interativo
+**Descrição**: Cria Product Requirements Document interativo (forma completa)
 
 **Uso**:
 ```bash
@@ -83,6 +122,8 @@
 5. Restrições e considerações
 
 **Resultado**: Arquivo `.taskmaster/docs/prd.txt`
+
+**Diferença do `/prd`**: Este comando segue um formulário estruturado, enquanto `/prd` é mais conversacional e flexível.
 
 ---
 
@@ -349,7 +390,8 @@
 ```bash
 # Setup inicial
 /project-setup
-/create-prd
+/prd "descrição do projeto"    # Criação rápida de PRD
+/create-prd                    # Criação estruturada de PRD
 /parse-prd
 
 # Workflow diário

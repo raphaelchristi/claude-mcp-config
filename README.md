@@ -112,7 +112,8 @@ cp config/CLAUDE.md ~/.claude/CLAUDE.md
 
 **Comandos disponíveis**:
 - `/project-setup` - Inicializar projeto
-- `/create-prd` - Criar documento de requisitos
+- `/prd "descrição"` - Criar PRD de forma rápida e conversacional
+- `/create-prd` - Criar documento de requisitos estruturado
 - `/parse-prd` - Gerar tarefas do PRD
 - `/task-status` - Ver status do projeto
 - `/next-task` - Próxima tarefa prioritária
