@@ -9,6 +9,7 @@ Este repositório documenta a configuração completa dos servidores MCP (Model 
 - [Configuração dos MCPs](#configuração-dos-mcps)
 - [Comandos Disponíveis](#comandos-disponíveis)
 - [Estrutura de Arquivos](#estrutura-de-arquivos)
+- [Comandos Customizados](#comandos-customizados)
 - [Exemplos de Uso](#exemplos-de-uso)
 - [Troubleshooting](#troubleshooting)
 
@@ -127,6 +128,8 @@ cp config/CLAUDE.md ~/.claude/CLAUDE.md
 ~/.claude/
 ├── .claude.json                    # Configuração principal do Claude Code
 ├── CLAUDE.md                       # Instruções globais para o Claude
+├── commands/                       # Comandos customizados
+│   └── prd.md                     # Comando /prd para criar PRDs
 └── .taskmaster-global/
     └── config.json                 # Configuração global do TaskMaster
 
@@ -138,6 +141,28 @@ cp config/CLAUDE.md ~/.claude/CLAUDE.md
 1. **`.claude.json`**: Configuração principal com os servidores MCP
 2. **`CLAUDE.md`**: Instruções globais que o Claude seguirá em todos os projetos
 3. **`.taskmaster-global/config.json`**: Configurações de modelos e preferências do TaskMaster
+4. **`commands/`**: Diretório com comandos customizados (como `/prd`)
+
+## 🎨 Comandos Customizados
+
+O Claude Code suporta comandos customizados através de arquivos Markdown em `~/.claude/commands/`.
+
+### Comando /prd Incluído
+- **Localização**: `~/.claude/commands/prd.md`
+- **Função**: Cria PRDs completos através de processo interativo de 4 fases
+- **Características**:
+  - Perguntas estruturadas e contextualizadas
+  - Template otimizado para 2025
+  - User stories com critérios de aceitação
+  - Integração perfeita com TaskMaster
+
+### Criar Seus Próprios Comandos
+```bash
+# Criar novo comando
+echo "# Meu Comando" > ~/.claude/commands/meucomando.md
+```
+
+Veja [docs/CUSTOM-COMMANDS.md](docs/CUSTOM-COMMANDS.md) para guia completo.
 
 ## 💡 Exemplos de Uso
 

@@ -67,42 +67,67 @@
 
 ## 📝 Comandos de Planejamento
 
-### `/prd "descrição"`
-**Descrição**: Comando rápido para criar PRD com contexto inicial
+### `/prd [descrição]`
+**Descrição**: Cria PRD completo através de processo interativo e estruturado
 
 **Uso**:
 ```bash
 /prd "Sistema de e-commerce com carrinho e pagamento"
 /prd "API REST para gerenciamento de tarefas"
+/prd "Task management app for remote teams"
 ```
 
-**Processo**:
-1. Inicia com o contexto fornecido
-2. Claude faz perguntas para detalhar requisitos
-3. Gera PRD completo de forma iterativa
-4. Salva automaticamente em `.taskmaster/docs/prd.txt`
+**Processo de 4 Fases**:
+1. **Initial Context Gathering** - Coleta informações essenciais sobre o projeto
+2. **Deep-dive Context** - Aprofunda em objetivos de negócio, UX e requisitos técnicos
+3. **PRD Generation** - Gera documento completo e estruturado
+4. **TaskMaster Optimization** - Otimiza para parsing do TaskMaster
+
+**Perguntas Estruturadas**:
+- Problem Statement: Qual problema específico resolve?
+- Target Users: Quem usará o produto?
+- Business Context: Objetivos e métricas de sucesso
+- Scope Boundaries: O que NÃO está no escopo?
+- Technical Context: Stack e restrições técnicas
+
+**Resultado**: PRD completo com:
+- Product overview e problem statement
+- Business goals e KPIs
+- User personas e journey mapping
+- Functional requirements priorizados (Must/Should/Could Have)
+- User experience e fluxos detalhados
+- Technical considerations e arquitetura
+- Success metrics e analytics
+- Project planning e fases
+- User stories com acceptance criteria
 
 **Exemplo de Diálogo**:
 ```
-User: /prd "Aplicativo de delivery de comida"
+User: /prd Task management app for remote teams
 
-Claude: Entendi! Vou criar um PRD para um aplicativo de delivery. 
-Algumas perguntas para detalhar:
+Claude: I'll help you create a comprehensive PRD for your task management app. 
+Let me start by understanding the core problem you're solving.
 
-1. Quais são os tipos de usuários? (cliente, restaurante, entregador?)
-2. Principais funcionalidades para cada tipo?
-3. Plataformas alvo? (Web, Mobile, ambos?)
-4. Integrações necessárias? (pagamento, mapas, etc.)
+What specific challenges do remote teams currently face with task management 
+that your app will address?
 
-User: 1. Todos os três tipos
-2. Cliente: buscar, pedir, acompanhar. Restaurante: cardápio, pedidos. 
-   Entregador: rotas, entregas
-3. Mobile primeiro, web admin
-4. Stripe, Google Maps, notificações push
+User: Teams struggle with visibility across time zones, async communication, 
+and tracking progress without micromanaging
 
-Claude: Perfeito! Mais alguns detalhes...
-[continua o diálogo iterativo]
+Claude: Thanks for that context. Now let me understand your target users better.
+
+Can you describe your primary user persona? For example, what's their role, 
+team size, current tools they use, and main frustrations?
+
+[Continua processo estruturado através das 4 fases]
 ```
+
+**Diferenciais**:
+- ✅ Processo iterativo e conversacional
+- ✅ Template PRD otimizado para 2025
+- ✅ User stories com critérios de aceitação testáveis
+- ✅ Integração perfeita com TaskMaster `/parse-prd`
+- ✅ Salva em `.taskmaster/docs/prd.md`
 
 ---
 
