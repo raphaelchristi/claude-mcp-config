@@ -275,6 +275,8 @@ Se você usar APIs adicionais (Perplexity, OpenAI, etc.):
 - [Context7 MCP](https://github.com/upstash/context7-mcp)
 - [TaskMaster AI](https://github.com/taskmaster-ai/taskmaster)
 - [Model Context Protocol](https://modelcontextprotocol.io/)
+- [Claudia (GUI para Claude Code)](https://github.com/getAsterisk/claudia)
+- [Instalação do Claudia no WSL](docs/CLAUDIA-WSL-INSTALLATION.md)
 
 ## 📝 Licença
 
