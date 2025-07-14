@@ -179,11 +179,24 @@ bun run tauri dev
 ./claudia/src-tauri/target/release/claudia
 ```
 
-### Criar Atalho
+### Aliases Úteis (Já Incluídos)
+O script de instalação já adiciona estes aliases ao seu `~/.bashrc`:
+
 ```bash
-# Criar alias para facilitar execução
-echo 'alias claudia="cd ~/claudia && bun run tauri dev"' >> ~/.bashrc
-echo 'alias claudia-exe="~/claudia/src-tauri/target/release/claudia"' >> ~/.bashrc
+# Alias principal - inteligente
+claudia                 # Executa compilado se existir, senão modo dev
+
+# Aliases específicos
+claudia-dev            # Modo desenvolvimento (com hot reload)
+claudia-build          # Compilar para produção
+claudia-run            # Executar versão compilada
+claudia-safe           # Executar com software rendering
+claudia-update         # Atualizar e recompilar
+claudia-clean          # Limpar e recompilar do zero
+```
+
+**Para ativar os aliases após instalação:**
+```bash
 source ~/.bashrc
 ```
 
