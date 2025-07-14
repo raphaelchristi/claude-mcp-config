@@ -5,7 +5,7 @@ Obrigado por considerar contribuir para este projeto!
 ## Como Contribuir
 
 ### Reportando Bugs
-1. Verifique se o bug já foi reportado nas [Issues](https://github.com/seu-usuario/claude-mcp-config/issues)
+1. Verifique se o bug já foi reportado nas [Issues](https://github.com/seu-usuario/claude-config/issues)
 2. Se não, crie uma nova issue incluindo:
    - Descrição clara do problema
    - Passos para reproduzir

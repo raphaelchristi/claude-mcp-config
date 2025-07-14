@@ -156,6 +156,20 @@ O Claude Code suporta comandos customizados através de arquivos Markdown em `~/
   - User stories com critérios de aceitação
   - Integração perfeita com TaskMaster
 
+### Comando claude-action (GitHub Actions)
+- **Localização**: `scripts/claude-action`
+- **Função**: Interagir com Claude Code Actions no GitHub via CLI
+- **Comandos disponíveis**:
+  - `claude-action implement` - Criar issue pedindo implementação
+  - `claude-action fix` - Criar issue pedindo correção de bug
+  - `claude-action review` - Pedir revisão de PR
+  - `claude-action pr-comment` - Comentar em PR com @claude
+- **Instalação**:
+  ```bash
+  sudo cp scripts/claude-action /usr/local/bin/
+  sudo chmod +x /usr/local/bin/claude-action
+  ```
+
 ### Criar Seus Próprios Comandos
 ```bash
 # Criar novo comando

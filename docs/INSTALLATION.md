@@ -149,7 +149,7 @@ EOF
 ### 3. Adicionar Instruções Globais (CLAUDE.md)
 ```bash
 # Baixar o arquivo CLAUDE.md do repositório
-curl -o ~/.claude/CLAUDE.md https://raw.githubusercontent.com/seu-usuario/claude-mcp-config/main/config/CLAUDE.md
+curl -o ~/.claude/CLAUDE.md https://raw.githubusercontent.com/seu-usuario/claude-config/main/config/CLAUDE.md
 
 # Ou copiar manualmente
 cp /caminho/para/CLAUDE.md ~/.claude/CLAUDE.md

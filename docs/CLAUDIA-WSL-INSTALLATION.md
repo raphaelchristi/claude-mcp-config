@@ -21,8 +21,8 @@ Execute o script de instalação automatizada:
 
 ```bash
 # Clone este repositório
-git clone https://github.com/[seu-usuario]/claude-mcp-config.git
-cd claude-mcp-config
+git clone https://github.com/[seu-usuario]/claude-config.git
+cd claude-config
 
 # Execute o script de instalação
 chmod +x scripts/install-claudia-wsl.sh
